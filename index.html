@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bio Links — Botões de Imagem</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #bde8ff, #e6ffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px;
+    }
+
+    .logo {
+      width: 220px;
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; /* ajuste global para aproximar/afastar */
+      align-items: center;
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .link-btn {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .link-btn img {
+      display: block;
+      transition: transform 0.35s ease;
+      pointer-events: none;
+      max-width: 100%;
+      height: auto; /* garante responsividade */
+      position: relative; /* para poder mover individualmente */
+    }
+
+    /* Efeito zoom no hover */
+    .link-btn:hover img {
+      transform: scale(1.05);
+    }
+
+    .link-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Controle individual de tamanho e posição */
+    .botao1 {
+      width: 600px;      /* aumenta/diminui tamanho */
+      top: 0px;          /* move verticalmente */
+      left: 0px;         /* move horizontalmente */
+    }
+
+    .botao2 {
+      width: 600px;
+      top: -20px;
+      left: 0px;
+    }
+
+    .botao3 {
+      width: 600px;
+      top: -40px;
+      left: -5px;
+    }
+
+    .botao4 {
+      width: 600px;
+      top: -60px;
+      left: 0px;
+    }
+
+    /* Responsividade em telas pequenas */
+    @media (max-width: 480px) {
+      .botao1, .botao2, .botao3, .botao4 {
+        width: 80%; /* ajusta proporcionalmente */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="logo.png" alt="Logo da loja" class="logo" />
+
+  <div class="links">
+    <a href="#" class="link-btn">
+      <img src="botão 1.png" alt="Kit Iniciante" class="botao1">
+    </a>
+
+    <a href="#" class="link-btn">
+      <img src="botão 2.png" alt="Nossa Loja" class="botao2">
+    </a>
+
+    <a href="#" class="link-btn">
+      <img src="botão 3.png" alt="Fale com a gente" class="botao3">
+    </a>
+
+    <a href="#" class="link-btn">
+      <img src="botão 4.png" alt="Nosso Instagram" class="botao4">
+    </a>
+  </div>
+
+</body>
+</html>
